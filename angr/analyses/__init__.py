@@ -25,3 +25,4 @@ from .disassembly import Disassembly
 from .variable_recovery import VariableRecovery
 from .identifier import Identifier
 from .reaching_definitions import ReachingDefinitionAnalysis
+from .calling_convention import CallingConventionAnalysis
