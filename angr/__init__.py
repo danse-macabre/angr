@@ -8,6 +8,7 @@ del Loggers
 
 # this must happen first, prior to initializing analyses
 from .sim_procedure import SimProcedure
+from .declarations import SIM_DECLARATIONS
 from .procedures import SIM_PROCEDURES, SimProcedures, SIM_LIBRARIES
 
 from . import sim_options
