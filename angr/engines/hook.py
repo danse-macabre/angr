@@ -54,7 +54,7 @@ class SimEngineHook(SimEngineProcedure):
             # symbolic IP is not supported
             return False
 
-        addr = state.se.exactly_int(state._ip)
+        addr = state.se.eval_one(state._ip)
 
         if procedure is None:
             if addr not in self.project._sim_procedures:

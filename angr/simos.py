@@ -72,7 +72,7 @@ class SimOS(object):
             cc = SYSCALL_CC[state.arch.name]['default'](state.arch)
 
         sym_num = cc.syscall_num(state)
-        possible = state.se.any_n_int(sym_num, 2)
+        possible = state.se.eval_upto(sym_num, 2)
 
         if len(possible) == 0:
             raise AngrUnsupportedSyscallError("The program state is not satisfiable")
